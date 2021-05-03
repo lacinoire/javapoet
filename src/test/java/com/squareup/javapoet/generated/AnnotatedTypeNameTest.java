@@ -38,11 +38,25 @@ public class AnnotatedTypeNameTest {
     }
 
     /**
-     * Amplified test case 'annotated_1'  Input modifications: 2 Assert statements added: 3  This test
-     * case improves the coverage in these classes/methods/lines: (Click on the green links to see these lines within
-     * the class) com.squareup.javapoet.TypeName: unbox L. 182 +3 instr. L. 183 +4 instr. L. 184 +4 instr. L. 185 +4
-     * instr. L. 186 +4 instr. L. 187 +4 instr. L. 188 +4 instr. L. 189 +4 instr. L. 190 +4 instr. L. 191 +4 instr. L
-     * . 192 +12 instr.
+     * Amplified test case 'annotated_1'
+     *
+     * Input modifications: 2
+     * Assert statements added: 3
+     *
+     * This test case improves the coverage in these classes/methods/lines:
+     * com.squareup.javapoet.TypeName:
+     * unbox
+     * L. 182 +3 instr.
+     * L. 183 +4 instr.
+     * L. 184 +4 instr.
+     * L. 185 +4 instr.
+     * L. 186 +4 instr.
+     * L. 187 +4 instr.
+     * L. 188 +4 instr.
+     * L. 189 +4 instr.
+     * L. 190 +4 instr.
+     * L. 191 +4 instr.
+     * L. 192 +12 instr.
      * @throws Exception
      */
     @Test(timeout = 10000)
@@ -53,7 +67,7 @@ public class AnnotatedTypeNameTest {
             TypeName.get(String.class);
             TypeName annotated = simpleString.annotated(NEVER_NULL);
             annotated.unbox();
-            Assert.fail("annotated_mg37 should have thrown UnsupportedOperationException");
+            Assert.fail("annotated_1 should have thrown UnsupportedOperationException");
         } catch (UnsupportedOperationException expected) {
             Assert.assertEquals("cannot unbox java.lang. @com.squareup.javapoet.generated.AnnotatedTypeNameTest" +
                                 ".NeverNull " +
