@@ -51,7 +51,38 @@ public class ParameterSpecTest {
     }
 
     /**
-     * Amplified test case 'modifyAnnotations_assSep4'  Input modifications: 1 Assert statements added: 1  This test
+     * Amplified test case 'modifyAnnotations_3'  Input modifications: 0 Assert statements added: 1
+     * This test case improves the coverage in these classes/methods/lines: (Click on the green links to see these
+     * lines within the class) com.squareup.javapoet.AnnotationSpec: equals L. 172 +3 instr. L. 173 +2 instr. L. 174
+     * +7 instr. =
+     * @throws Exception
+     */
+    @Test(timeout = 10000)
+    public void modifyAnnotations_3() throws Exception {
+        Object __DSPOT_o_3 = new Object();
+        ParameterSpec.Builder builder = ParameterSpec.builder(int.class, "foo").addAnnotation(Override.class).addAnnotation(SuppressWarnings.class);
+        AnnotationSpec __DSPOT_invoc_5 = builder.annotations.remove(1);
+        boolean o_modifyAnnotations_rv27__9 = __DSPOT_invoc_5.equals(__DSPOT_o_3);
+        Truth.assertThat(o_modifyAnnotations_rv27__9).isFalse();
+    }
+
+    /**
+     * Amplified test case 'modifyAnnotations_4'  Input modifications: 1 Assert statements added: 1  This
+     * test case improves the coverage in these classes/methods/lines: (Click on the green links to see these lines
+     * within the class) com.squareup.javapoet.CodeWriter: emitAnnotations L. 165 +4 instr. L. 166 +4 instr. L. 167
+     * +7 instr. L. 168 +1 instr.
+     * @throws Exception
+     */
+    @Test(timeout = 10000)
+    public void modifyAnnotations_4() throws Exception {
+        ParameterSpec.Builder builder = ParameterSpec.builder(int.class, "foo").addAnnotation(Override.class).addAnnotation(SuppressWarnings.class);
+        builder.annotations.remove(1);
+        ParameterSpec o_modifyAnnotations_mg25__6 = builder.build();
+        Truth.assertThat(((ParameterSpec) (o_modifyAnnotations_mg25__6)).toString()).isEqualTo("@java.lang.Override int foo");
+    }
+
+    /**
+     * Amplified test case 'modifyAnnotations_5'  Input modifications: 1 Assert statements added: 1  This test
      * case improves the coverage in these classes/methods/lines: (Click on the green links to see these lines within
      * the class) com.squareup.javapoet.CodeBlock$Builder: addArgument L. 12 +7 instr. L. 13 +1 instr. argToType L. 1
      * +6 instr. com.squareup.javapoet.CodeWriter$Multiset: contains L. 1 +11 instr. com.squareup.javapoet
@@ -71,14 +102,14 @@ public class ParameterSpecTest {
      * @throws Exception
      */
     @Test(timeout = 10000)
-    public void modifyAnnotations_assSep4() throws Exception {
+    public void modifyAnnotations_5() throws Exception {
         ParameterSpec.Builder builder = ParameterSpec.builder(int.class, "foo").addAnnotation(Override.class).addAnnotation(SuppressWarnings.class);
         AnnotationSpec o_modifyAnnotations__5 = builder.annotations.remove(1);
         Truth.assertThat(((AnnotationSpec) (o_modifyAnnotations__5)).toString()).isEqualTo("@java.lang.SuppressWarnings");
     }
 
     /**
-     * Amplified test case 'modifyAnnotations_assSep5'  Input modifications: 1 Assert statements added: 1  This test
+     * Amplified test case 'modifyAnnotations_excluded'  Input modifications: 1 Assert statements added: 1  This test
      * case improves the coverage in these classes/methods/lines: (Click on the green links to see these lines within
      * the class) com.squareup.javapoet.CodeBlock$Builder: addArgument L. 12 +7 instr. L. 13 +1 instr. argToType L. 1
      * +6 instr. com.squareup.javapoet.CodeWriter$Multiset: contains L. 1 +11 instr. com.squareup.javapoet
@@ -98,40 +129,9 @@ public class ParameterSpecTest {
      * @throws Exception
      */
     @Test(timeout = 10000)
-    public void modifyAnnotations_assSep5() throws Exception {
+    public void modifyAnnotations_excluded() throws Exception {
         ParameterSpec.Builder builder = ParameterSpec.builder(int.class, "foo").addAnnotation(Override.class).addAnnotation(SuppressWarnings.class);
         AnnotationSpec o_modifyAnnotations__5 = builder.annotations.remove(1);
         Truth.assertThat(((int) (((AnnotationSpec) (o_modifyAnnotations__5)).hashCode()))).isEqualTo(-1410730048);
-    }
-
-    /**
-     * Amplified test case 'modifyAnnotations_mg25_assSep97'  Input modifications: 1 Assert statements added: 1  This
-     * test case improves the coverage in these classes/methods/lines: (Click on the green links to see these lines
-     * within the class) com.squareup.javapoet.CodeWriter: emitAnnotations L. 165 +4 instr. L. 166 +4 instr. L. 167
-     * +7 instr. L. 168 +1 instr.
-     * @throws Exception
-     */
-    @Test(timeout = 10000)
-    public void modifyAnnotations_mg25_assSep97() throws Exception {
-        ParameterSpec.Builder builder = ParameterSpec.builder(int.class, "foo").addAnnotation(Override.class).addAnnotation(SuppressWarnings.class);
-        builder.annotations.remove(1);
-        ParameterSpec o_modifyAnnotations_mg25__6 = builder.build();
-        Truth.assertThat(((ParameterSpec) (o_modifyAnnotations_mg25__6)).toString()).isEqualTo("@java.lang.Override int foo");
-    }
-
-    /**
-     * Amplified test case 'modifyAnnotations_rv27_assSep102'  Input modifications: 0 Assert statements added: 1
-     * This test case improves the coverage in these classes/methods/lines: (Click on the green links to see these
-     * lines within the class) com.squareup.javapoet.AnnotationSpec: equals L. 172 +3 instr. L. 173 +2 instr. L. 174
-     * +7 instr. =
-     * @throws Exception
-     */
-    @Test(timeout = 10000)
-    public void modifyAnnotations_rv27_assSep102() throws Exception {
-        Object __DSPOT_o_3 = new Object();
-        ParameterSpec.Builder builder = ParameterSpec.builder(int.class, "foo").addAnnotation(Override.class).addAnnotation(SuppressWarnings.class);
-        AnnotationSpec __DSPOT_invoc_5 = builder.annotations.remove(1);
-        boolean o_modifyAnnotations_rv27__9 = __DSPOT_invoc_5.equals(__DSPOT_o_3);
-        Truth.assertThat(o_modifyAnnotations_rv27__9).isFalse();
     }
 }

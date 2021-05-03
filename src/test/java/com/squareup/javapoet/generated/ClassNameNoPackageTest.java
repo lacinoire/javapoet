@@ -21,7 +21,22 @@ public final class ClassNameNoPackageTest {
     }
 
     /**
-     * Amplified test case 'shouldSupportClassInDefaultPackage_assSep5'  Input modifications: 0 Assert statements
+     * Amplified test case 'shouldSupportClassInDefaultPackage_2'  Input modifications: 1 Assert
+     * statements added: 1  This test case improves the coverage in these classes/methods/lines: (Click on the green
+     * links to see these lines within the class) com.squareup.javapoet.ClassName: annotated L. 69 +11 instr. L. 70
+     * +2 instr. com.squareup.javapoet.TypeName: concatAnnotations L. 125 +6 instr. L. 126 +4 instr. L. 127 +2 instr.
+     * @throws Exception
+     */
+    @Test(timeout = 10000)
+    public void shouldSupportClassInDefaultPackage_2() throws Exception {
+        List<AnnotationSpec> __DSPOT_annotations_0 = Collections.<AnnotationSpec>emptyList();
+        ClassName className = ClassName.get(ClassNameNoPackageTest.class);
+        ClassName o_shouldSupportClassInDefaultPackage_mg11__5 = className.annotated(__DSPOT_annotations_0);
+        Truth.assertThat(((ClassName) (o_shouldSupportClassInDefaultPackage_mg11__5)).isAnnotated()).isFalse();
+    }
+
+    /**
+     * Amplified test case 'shouldSupportClassInDefaultPackage_excluded'  Input modifications: 0 Assert statements
      * added: 1  This test case improves the coverage in these classes/methods/lines: (Click on the green links to
      * see these lines within the class) com.squareup.javapoet.ClassName: emit L. 268 +9 instr. L. 269 +6 instr. L.
      * 270 +3 instr. com.squareup.javapoet.TypeName: isBoxedPrimitive L. 147 +7 instr. L. 148 +4 instr. L. 149 +4
@@ -32,23 +47,8 @@ public final class ClassNameNoPackageTest {
      * @throws Exception
      */
     @Test(timeout = 10000)
-    public void shouldSupportClassInDefaultPackage_assSep5() throws Exception {
+    public void shouldSupportClassInDefaultPackage_excluded() throws Exception {
         ClassName className = ClassName.get(ClassNameNoPackageTest.class);
         Truth.assertThat(((ClassName) (className)).isBoxedPrimitive()).isFalse();
-    }
-
-    /**
-     * Amplified test case 'shouldSupportClassInDefaultPackage_mg11_assSep58'  Input modifications: 1 Assert
-     * statements added: 1  This test case improves the coverage in these classes/methods/lines: (Click on the green
-     * links to see these lines within the class) com.squareup.javapoet.ClassName: annotated L. 69 +11 instr. L. 70
-     * +2 instr. com.squareup.javapoet.TypeName: concatAnnotations L. 125 +6 instr. L. 126 +4 instr. L. 127 +2 instr.
-     * @throws Exception
-     */
-    @Test(timeout = 10000)
-    public void shouldSupportClassInDefaultPackage_mg11_assSep58() throws Exception {
-        List<AnnotationSpec> __DSPOT_annotations_0 = Collections.<AnnotationSpec>emptyList();
-        ClassName className = ClassName.get(ClassNameNoPackageTest.class);
-        ClassName o_shouldSupportClassInDefaultPackage_mg11__5 = className.annotated(__DSPOT_annotations_0);
-        Truth.assertThat(((ClassName) (o_shouldSupportClassInDefaultPackage_mg11__5)).isAnnotated()).isFalse();
     }
 }
